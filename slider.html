@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery Practice!</title>
+
+<style>
+*{
+margin:0;
+padding: 0;
+}
+  body
+  {
+    width:225px;
+    margin:100px auto 0;
+  }
+
+</style>
+<link href="includes/css/slider.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="slider">
+  <ul>
+    <li><img src="includes/img/img1.jpg" alt=""></li>
+    <li><img src="includes/img/img2.jpg" alt=""></li>
+    <li><img src="includes/img/img3.jpg" alt=""></li>
+    <li><img src="includes/img/img4.jpg" alt=""></li>
+  </ul>
+</div>
+<div id="slider-nav">
+  <button data-dir="prev">Prev</button>
+  <button data-dir="next">Next</button>
+</div>
+  </body>
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="includes/js/slider.js"><\script>
+  <!-- If no online access, fallback to our hardcoded version of jQuery -->
+  <script>
+      window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\script>')
+  </script>
+
+</html>
