@@ -33,10 +33,19 @@ padding: 0;
 </div>
   </body>
   <script src="http://code.jquery.com/jquery.js"></script>
-  <script src="includes/js/slider.js"><\script>
+
   <!-- If no online access, fallback to our hardcoded version of jQuery -->
   <script>
-      window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\script>')
+  window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')
+  </script>
+  <script src="./includes/js/slider.js"></script>
+  <script>
+  var container=$('div.slider').css('overflow','hidden').children('ul'),
+  slider=new Slider(container , $('#slider-nav'));
+  slider.nav.find('button').on('click',function(){
+  slider.setCurrent($(this).data('dir'));
+  slider.transition();
+  })
   </script>
 
 </html>
